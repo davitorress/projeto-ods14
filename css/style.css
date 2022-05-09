@@ -61,10 +61,10 @@ a {
 	left: 0;
 	width: 100%;
 
-	background-size: cover;
-	background-position: center;
 	background-repeat: no-repeat;
-	background: linear-gradient(180deg, #0000004d 9.57%, #00000000 53.01%, #0000004d 97.37%), linear-gradient(180deg, #1f263900 72.04%, #0b0f1a 104.72%), linear-gradient(0deg, #0000000d, #0000000d), url(../img/banner.png), #1f97d4;
+	background-size: cover !important;
+	background-position: center !important;
+	background: linear-gradient(180deg, #0000004d 9.57%, #00000000 53.01%, #0000004d 97.37%), linear-gradient(180deg, #1f263900 72.04%, #0b0f1a 104.72%), linear-gradient(0deg, #0000000d, #0000000d), url(../img/banner-02.jpg), #1f97d4;
 }
 
 header {
