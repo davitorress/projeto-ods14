@@ -383,6 +383,15 @@ header {
 	font-weight: 700;
 }
 
+.content-container h2 {
+	font-size: 1.3vw;
+	font-weight: 600;
+	color: #6b6b6b;
+	margin-top: 25px;
+	padding-left: 20px;
+	border-left: 7px solid #6b6b6b;
+}
+
 .content-container h3 {
 	font-size: 2.5vw;
 	font-weight: 700;
@@ -418,4 +427,111 @@ header {
 	display: flex;
 	margin: 15px auto;
 	border-radius: 12px;
+}
+
+.content-container .topicos {
+	padding-left: 20px;
+}
+
+.content-container .topicos ul li {
+	margin-top: 10px;
+	font-size: 1.3vw;
+	font-weight: 600;
+	margin-top: 10px;
+	color: #6b6b6b;
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+
+	width: 100%;
+	height: 30vh;
+	padding: 20px;
+
+	background: #0B0F1A;
+	font-family: 'Inter', sans-serif;
+}
+
+.footer div:not(:first-child) {
+	margin-left: 30px;
+}
+
+.footer .logo {
+	width: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+
+.footer .menu {
+	display: flex;
+	align-items: center;
+
+	width: 50%;
+}
+
+.footer .menu div {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	width: 50%;
+}
+
+.footer .menu ul li {
+	display: flex;
+}
+
+.footer .menu ul li:not(:first-child) {
+	margin-top: 10px;
+}
+
+.footer .menu ul li a {
+	font-size: 1.1vw;
+	font-weight: 400;
+}
+
+.footer .site-onu {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 20%;
+}
+
+.footer b {
+	font-size: 1.2vw;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.footer .social {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	width: 20%;
+}
+
+.footer .social div {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer .social ul li {
+	display: inline;
+}
+
+.footer .social ul li:not(:first-child) {
+	margin-left: 10px;
+}
+
+.footer .social ul li a {
+	font-size: 2vw;
+	font-weight: 400;
 }
