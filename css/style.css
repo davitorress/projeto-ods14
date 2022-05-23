@@ -349,6 +349,10 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
+.content-container:not(:first-child) {
+    margin-top: 70px;
+}
+
 .content-container h2 {
     font-size: 2.7vw;
     margin-bottom: 30px;
@@ -378,15 +382,15 @@ header {
     display: flex;
 }
 
-#poluicao .flexbox .flex-left {
+.content-container .flexbox .flex-left {
     width: 50%;
 }
 
-#poluicao .flexbox .flex-left div {
+.content-container .flexbox .flex-left div {
     width: 100%;
 }
 
-#poluicao .flexbox .flex-right {
+.content-container .flexbox .flex-right {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -394,15 +398,15 @@ header {
     margin-left: 50px;
 }
 
-#poluicao .flexbox .flex-right div {
+.content-container .flexbox .flex-right div {
     width: 100%;
 }
 
-#poluicao .flexbox .flex-right div p {
+.content-container .flexbox .flex-right div p {
     margin-top: 5px;
 }
 
-#poluicao .flexbox .flex-right div:not(:first-child) {
+.content-container .flexbox .flex-right div:not(:first-child) {
     margin-top: 20px;
 }
 
@@ -526,6 +530,7 @@ header {
 } */
 
 .footer {
+    margin-top: 70px;
     display: flex;
     align-items: center;
     flex-direction: row;
