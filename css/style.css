@@ -475,6 +475,10 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
+.content-container .grade .card-grade img {
+    width: 48px;
+}
+
 .footer {
     margin-top: 70px;
     display: flex;
