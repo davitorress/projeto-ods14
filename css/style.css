@@ -61,23 +61,16 @@ a {
     background-size: cover !important;
     background-position: center !important;
     background: linear-gradient(180deg, #0000004d 9.57%, #00000000 53.01%, #0000004d 97.37%), linear-gradient(180deg, #1f263900 72.04%, #0b0f1a 104.72%), linear-gradient(0deg, #0000000d, #0000000d), url(../img/banner-01.jpg);
-    animation: slides 5s infinite;
-}
-
-@keyframes slides {
-    0% {
-        background: linear-gradient(180deg, #0000004d 9.57%, #00000000 53.01%, #0000004d 97.37%), linear-gradient(180deg, #1f263900 72.04%, #0b0f1a 104.72%), linear-gradient(0deg, #0000000d, #0000000d), url(../img/banner-01.jpg);
-    }
-    50% {
-        background: linear-gradient(180deg, #0000004d 9.57%, #00000000 53.01%, #0000004d 97.37%), linear-gradient(180deg, #1f263900 72.04%, #0b0f1a 104.72%), linear-gradient(0deg, #0000000d, #0000000d), url(../img/banner-02.png);
-    }
 }
 
 header {
+    z-index: 1;
     width: 100%;
-    padding: 3% 0;
+    padding: 1% 5%;
     display: flex;
     align-items: center;
+    position: fixed;
+    background-color: #0b0f1a;
 }
 
 .logo {
@@ -105,6 +98,10 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
+.navbar ul li:hover {
+    animation: pulse 2s infinite;
+}
+
 .navbar ul li:not(:first-child) {
     padding-left: 46px;
 }
@@ -112,7 +109,8 @@ header {
 .hero-container {
     width: 100%;
     height: fit-content;
-    margin-top: 120px;
+    margin-top: 100px;
+    padding-top: 80px;
     padding-bottom: 3%;
     display: flex;
 }
@@ -148,7 +146,6 @@ header {
 .square-point {
     width: 30px;
     height: 30px;
-    left: -1vw;
     position: relative;
     border: 4px solid rgba(255, 255, 255, 0.349);
 }
@@ -157,13 +154,22 @@ header {
     position: relative;
 }
 
-.hero-text:nth-child(1) div:not(:first-child) {
-    margin-left: 2vw;
-}
-
 .hero-text:nth-child(1) img {
     margin-top: 30%;
     margin-bottom: 40px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(120%);
+    }
+    100% {
+        transform: scale(100%);
+    }
 }
 
 .hero-text:nth-child(2) {
@@ -213,7 +219,6 @@ header {
     height: fit-content;
     padding: 3% 0;
     display: flex;
-    margin-left: 3vw;
 }
 
 .intro-container:nth-child(1) div:nth-child(1) {
@@ -285,7 +290,7 @@ header {
 .intro-container:nth-child(2) .grade {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     height: fit-content;
     position: relative;
@@ -345,7 +350,7 @@ header {
 
 .content-container {
     width: 100%;
-    padding: 3% 5%;
+    padding: 10% 5% 0;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -360,7 +365,7 @@ header {
 
 .content-container h3 {
     font-size: 2.3vw;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .content-container h5 {
@@ -382,12 +387,20 @@ header {
     display: flex;
 }
 
+.content-container .flexbox:not(:last-child) {
+    margin-bottom: 50px;
+}
+
 .content-container .flexbox .flex-left {
     width: 50%;
 }
 
 .content-container .flexbox .flex-left div {
     width: 100%;
+}
+
+.content-container .flexbox .flex-left div p:not(:first-child) {
+    margin-top: 20px;
 }
 
 .content-container .flexbox .flex-right {
@@ -410,124 +423,57 @@ header {
     margin-top: 20px;
 }
 
-
-/* .content-container .dados {
-    margin: 40px 0;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.content-container .dados div:not(:first-child) {
-    margin-left: 40px;
-}
-
-.content-container h1 {
-    font-size: 3.5vw;
-    font-weight: 700;
-}
-
-.content-container h2 {
-    font-size: 1.3vw;
-    font-weight: 600;
-    color: #6b6b6b;
-    margin-top: 25px;
-    padding-left: 20px;
-    border-left: 7px solid #6b6b6b;
-}
-
-.content-container h3 {
-    font-size: 2.5vw;
-    font-weight: 700;
-    margin-top: 20px;
-}
-
-.content-container h4 {
-    margin: 10px 0 20px;
-    font-size: 1.3vw;
-    font-weight: 400;
-}
-
-.content-container h5 {
-    margin-top: 10px;
-    font-size: 3vw;
-    font-weight: 700;
-}
-
-.content-container h6 {
-    margin-top: 10px;
-    font-size: 1.5vw;
-    font-weight: 600;
-}
-
-.content-container p {
-    font-size: 1.3vw;
-    font-weight: 400;
-    margin-top: 10px;
-}
-
-
-.content-container img {
-    height: 300px;
-    display: flex;
-    margin: 15px auto;
-    border-radius: 12px;
-}
-
-.content-container .topicos {
-    padding-left: 20px;
-}
-
-.content-container .topicos ul li {
-    margin-top: 10px;
-    font-size: 1.3vw;
-    font-weight: 600;
-    margin-top: 10px;
-}
-
-.card-container {
+.content-container .topics {
     width: 100%;
+}
+
+.content-container .topics:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.content-container .topics ul {
+    margin-left: 1.3vw;
+}
+
+.content-container .topics ul li:not(:first-child) {
+    margin-top: 10px;
+}
+
+.content-container .grade {
     display: flex;
     align-items: center;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 50px 0;
-    text-align: center;
-    box-shadow: 0px 0px 15px -5px #000000;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    position: relative;
 }
 
-.card-container .card-content b {
-    font-size: 1.7vw;
-}
-
-.card-container .card-content:nth-child(1) {
-    width: 60%;
-    padding: 20px;
-}
-
-.card-container .card-content:nth-child(1) .card-data {
+.content-container .grade .card-grade {
     display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: fit-content;
+    height: 100px;
+    background: #ffffff14;
+    padding: 0 1.5%;
 }
 
-.card-container .card-content:nth-child(1) .card-data div {
-    display: block;
-    margin-top: 20px;
+.content-container .grade .card-grade:first-child {
+    margin-right: 15px;
 }
 
-.card-container .card-content:nth-child(1) .card-data div:not(:first-child) {
+.content-container .grade .card-grade:last-child {
     margin-left: 15px;
 }
 
-.card-container .card-content:nth-child(2) {
-    display: flex;
-    justify-content: end;
-    padding: 0;
-    width: 40%;
+.content-container .grade .card-grade p {
+    display: block;
+    margin-left: 30px;
+    font-size: 1.3vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
 }
-
-.card-container .card-content:nth-child(2) img {
-    width: 80%;
-} */
 
 .footer {
     margin-top: 70px;
