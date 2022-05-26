@@ -23,7 +23,7 @@ html {
 body {
     width: 100%;
     height: fit-content;
-    background: linear-gradient(180deg, #0B0F1A 48.13%, #0B0F1A 63.93%, #0B0F1A 67.41%, #0b0f1af5 72.01%), linear-gradient(0deg, #0b0f1a26, #0b0f1a26), #000000;
+    background: #0A0E18;
 }
 
 a {
@@ -60,7 +60,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center !important;
-    background: linear-gradient(180deg, #0000004d 9.57%, #00000000 53.01%, #0000004d 97.37%), linear-gradient(180deg, #1f263900 72.04%, #0b0f1a 104.72%), linear-gradient(0deg, #0000000d, #0000000d), url(../img/banner-01.jpg);
+    background: linear-gradient(180deg, #0000004d 9.57%, #00000000 53.01%, #0000004d 97.37%), linear-gradient(180deg, #1f263900 72.04%, #0A0E18 104.72%), linear-gradient(0deg, #0000000d, #0000000d), url(../img/banner-01.jpg);
 }
 
 header {
@@ -70,7 +70,7 @@ header {
     display: flex;
     align-items: center;
     position: fixed;
-    background-color: #0b0f1a;
+    background-color: #0A0E18;
 }
 
 .logo {
@@ -298,54 +298,57 @@ header {
 
 .intro-container:nth-child(2) .grade .card-grade {
     display: flex;
-    align-items: center;
-    width: fit-content;
-    height: 100px;
-    background: #ffffff14;
-    padding: 0 3%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 12px;
+    width: 315px;
+    height: 535px;
     margin: 50px 0;
+    background: #2b28e2;
+    border-radius: 15px;
 }
 
-.intro-container:nth-child(2) .grade .card-grade:nth-child(even) {
-    margin: 0 50px;
+.intro-container:nth-child(2) .grade .card-grade .img {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    width: auto;
+    height: 403px;
+    border-radius: 15px 15px 0 0;
+}
+
+.intro-container:nth-child(2) .grade .card-grade:nth-child(1) .img {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 57.35%, rgba(0, 0, 0, 0.8) 100%), url(../img/grade-img-01.png);
+}
+
+.intro-container:nth-child(2) .grade .card-grade:nth-child(2) .img {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 57.35%, rgba(0, 0, 0, 0.8) 100%), url(../img/grade-img-02.png);
+}
+
+.intro-container:nth-child(2) .grade .card-grade:nth-child(3) .img {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 57.35%, rgba(0, 0, 0, 0.8) 100%), url(../img/grade-img-03.png);
+}
+
+.intro-container:nth-child(2) .grade .card-grade .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
 }
 
 .intro-container:nth-child(2) .grade .card-grade p {
     margin-left: 30px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 18px;
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
-}
-
-.intro-container:nth-child(2) .citacao {
-    margin: 0 auto;
-    width: fit-content;
-    text-align: center;
-}
-
-.intro-container:nth-child(2) .citacao .bordered {
-    width: 7px;
-    height: 75px;
-    background-color: #fff;
-    margin: 32px auto;
-}
-
-.intro-container:nth-child(2) .citacao h1 {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 42px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.intro-container:nth-child(2) .citacao p {
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 32px;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .content-container {
@@ -354,22 +357,33 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
-.content-container:not(:first-child) {
-    margin-top: 70px;
+.content-container h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 100px;
 }
 
-.content-container h2 {
-    font-size: 2.7vw;
-    margin-bottom: 30px;
+.content-container mark {
+    color: #fff;
+    background-color: #2b28e2;
 }
 
 .content-container h3 {
-    font-size: 2.3vw;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.content-container h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
 .content-container h5 {
-    font-size: 1.7vw;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 65px;
+    margin-bottom: 10px;
 }
 
 .content-container h6 {
@@ -380,11 +394,17 @@ header {
 }
 
 .content-container p {
-    font-size: 1.3vw;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.content-container h5>p {
+    font-weight: 500;
 }
 
 .content-container .flexbox {
     display: flex;
+    gap: 100px;
 }
 
 .content-container .flexbox:not(:last-child) {
@@ -399,84 +419,251 @@ header {
     width: 100%;
 }
 
-.content-container .flexbox .flex-left div p:not(:first-child) {
-    margin-top: 20px;
+#poluicao .flexbox .flex-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+#impactos .flexbox .flex-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 35px;
 }
 
 .content-container .flexbox .flex-right {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 50px;
 }
 
 .content-container .flexbox .flex-right div {
     width: 100%;
 }
 
-.content-container .flexbox .flex-right div p {
-    margin-top: 5px;
-}
-
 .content-container .flexbox .flex-right div:not(:first-child) {
     margin-top: 20px;
 }
 
-.content-container .topics {
-    width: 100%;
-}
-
-.content-container .topics:not(:last-child) {
-    margin-bottom: 30px;
-}
-
-.content-container .topics ul {
-    margin-left: 1.3vw;
-}
-
-.content-container .topics ul li:not(:first-child) {
-    margin-top: 10px;
-}
-
-.content-container .grade {
+#poluicao .flexbox .flex-right {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 70px;
+}
+
+#impactos .flexbox .flex-right .img {
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(0deg, rgba(10, 14, 25, 0.2), rgba(10, 14, 25, 0.2)), url(../img/image\ 32.png);
+}
+
+.content-container .flexgrid {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    height: 120px;
-    position: relative;
+    align-items: center;
+    padding: 0px;
+    text-align: center;
+    margin-top: 130px;
 }
 
-.content-container .grade .card-grade {
+.content-container .flexgrid .grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+    width: 986px;
+    height: 292px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.content-container .flexgrid .grid .grid-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    width: 300px;
+    height: 292px;
+    background: #0b0f1a;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content-container .flexgrid .grid .grid-card .img {
+    width: 300px;
+    height: 189px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content-container .flexgrid .grid .grid-card:nth-child(1) .img {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.91%, rgba(0, 0, 0, 0.8) 100%), url(../img/grid-card-01.png);
+}
+
+.content-container .flexgrid .grid .grid-card:nth-child(2) .img {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.91%, rgba(0, 0, 0, 0.8) 100%), url(../img/grid-card-02.png);
+}
+
+.content-container .flexgrid .grid .grid-card:nth-child(3) .img {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.91%, rgba(0, 0, 0, 0.8) 100%), url(../img/grid-card-03.png);
+}
+
+.content-container .flexgrid .grid .grid-card .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.elipse {
+    width: 90%;
+    height: 92px;
+    background: #2B28E2;
+    filter: blur(200px);
+    z-index: -1;
+}
+
+#economia {
+    margin-top: 140px;
+}
+
+#economia h2 {
+    margin-bottom: 35px;
+}
+
+.content-container .data-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 68px;
+    width: 100%;
+    height: 105px;
+    margin-top: 110px;
+    margin-bottom: 150px;
+}
+
+.content-container .data-grid .data-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 266px;
+    height: 124px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content-container .data-grid .data-card h5 {
+    font-size: 40px;
+    line-height: 48px;
+}
+
+#ciencia h2 {
+    margin-bottom: 27px;
+}
+
+#ciencia .flexbox .img {
+    width: 670px;
+    height: 735px;
+    background-position: center !important;
+    background: linear-gradient(89deg, rgba(10, 14, 24, 0) 43.79%, #0A0E18 97.36%), radial-gradient(71.79% 49.02% at 63.28% 50.05%, rgba(10, 14, 24, 0) 35.14%, #0A0E18 100%), url(../img/ciencia-back.png);
+}
+
+#ciencia .flexbox .flex-right {
+    width: 70%;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+#unclos {
+    height: 748px;
+    background: radial-gradient(65.96% 36.66% at 50% 43.4%, rgba(9, 13, 22, 0) 55.18%, #0A0E18 100%), linear-gradient(0deg, rgba(9, 13, 22, 0.2), rgba(9, 13, 22, 0.2)), url(../img/unclos-back.png);
+}
+
+#unclos .title {
+    display: flex;
     flex-direction: row;
-    width: fit-content;
-    height: 100px;
-    background: #ffffff14;
-    padding: 0 1.5%;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
 }
 
-.content-container .grade .card-grade:first-child {
-    margin-right: 15px;
+#unclos .title h2 {
+    margin-bottom: 0;
 }
 
-.content-container .grade .card-grade:last-child {
-    margin-left: 15px;
+#unclos .title img {
+    width: 80px;
+    height: 66px;
 }
 
-.content-container .grade .card-grade p {
-    display: block;
-    margin-left: 30px;
-    font-size: 1.3vw;
+#unclos .grid-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    height: 269px;
+    margin-top: 96px;
+}
+
+#unclos .grid-text .grid-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 70px;
+    height: 94px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-top: 27px;
+}
+
+#unclos .grid-text .grid-data .text-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px;
+    width: 225px;
+    height: 94px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#unclos b {
+    font-size: 25px;
     font-weight: 700;
-    text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
+    line-height: 30px;
 }
 
-.content-container .grade .card-grade img {
-    width: 48px;
+#unclos span {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-top: 7px;
 }
 
 .footer {
@@ -489,7 +676,7 @@ header {
     padding: 20px;
     background: #0B0F1A;
     font-family: 'Inter', sans-serif;
-    border-top: 3px solid #ffffff59;
+    border-top: 3px solid #2b28e2;
 }
 
 .footer div:not(:first-child) {
