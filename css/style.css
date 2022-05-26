@@ -457,7 +457,7 @@ header {
 #impactos .flexbox .flex-right .img {
     width: 600px;
     height: 400px;
-    background: linear-gradient(0deg, rgba(10, 14, 25, 0.2), rgba(10, 14, 25, 0.2)), url(../img/image\ 32.png);
+    background: linear-gradient(0deg, rgba(10, 14, 25, 0.2), rgba(10, 14, 25, 0.2)), url(../img/impactos.png);
 }
 
 .content-container .flexgrid {
